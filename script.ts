@@ -14,12 +14,13 @@ document.getElementById('resumeform')?.addEventListener('submit', function(event
     const education = educationElement.value;
     const skills=skillsElement.value
     // const image = imageElement.files && imageElement.files.length > 0 ? imageElement.files[0].name : 'No image uploaded';
-const profileImageFIle=imageInput.files?.[0]
+const profileImageFIle=imageInput.files?.[0];
 const profileImageURL=profileImageFIle?URL.createObjectURL(profileImageFIle):"";
 
     // Correctly use the extracted values in the template string
     const resOutput = `
-    ${profileImageURL ? `<img src="${profileImageURL} alt="profile picture" class="profileImage">`:''} 
+    ${profileImageURL ? `<img src=${profileImageURL} alt="profile picture" class="profileImage">` : ''}
+
         <h2>Personal Information</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>

@@ -17,7 +17,7 @@ var _a;
     var profileImageFIle = (_a = imageInput.files) === null || _a === void 0 ? void 0 : _a[0];
     var profileImageURL = profileImageFIle ? URL.createObjectURL(profileImageFIle) : "";
     // Correctly use the extracted values in the template string
-    var resOutput = "\n    ".concat(profileImageURL ? "<img src=\"".concat(profileImageURL, " alt=\"profile picture\" class=\"profileImage\">") : '', " \n        <h2>Personal Information</h2>\n        <p><strong>Name:</strong> ").concat(name, "</p>\n        <p><strong>Email:</strong> ").concat(email, "</p>\n        <p><strong>Contact:</strong> ").concat(contact, "</p>\n        <h2>Education</h2>\n        <p><strong>Education:</strong> ").concat(education, "</p>\n          <p><strong>Education:</strong> ").concat(skills, "</p>\n       \n    ");
+    var resOutput = "\n    ".concat(profileImageURL ? "<img src=".concat(profileImageURL, " alt=\"profile picture\" class=\"profileImage\">") : '', "\n\n        <h2>Personal Information</h2>\n        <p><strong>Name:</strong> ").concat(name, "</p>\n        <p><strong>Email:</strong> ").concat(email, "</p>\n        <p><strong>Contact:</strong> ").concat(contact, "</p>\n        <h2>Education</h2>\n        <p><strong>Education:</strong> ").concat(education, "</p>\n          <p><strong>Education:</strong> ").concat(skills, "</p>\n       \n    ");
     var resumeOutputElement = document.getElementById("resumeOutput");
     if (resumeOutputElement) {
         resumeOutputElement.innerHTML = resOutput;
